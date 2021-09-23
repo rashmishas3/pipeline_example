@@ -1,7 +1,7 @@
 pipeline {
 	agent { label 'master' }
 	stages {
-		prallel {
+		parallel {
 			stage('BUILD1') {
 				steps {
 					sh 'echo this is my first stage in pipeline job'
