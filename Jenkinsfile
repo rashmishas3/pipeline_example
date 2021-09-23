@@ -5,13 +5,14 @@ pipeline {
 			steps {
 				sh 'echo this is my first stage in pipeline job'
 				sh 'ls -lrt'
+				sh 'sleep 5'
 			}
 		}
 		
 		stage('TEST') {
 			steps {
 				sh ''' 
-					echo this is my first stage in pipeline job
+					sleep 5
 					du -h 
 				   '''
 			}
@@ -20,7 +21,7 @@ pipeline {
 		stage('DEPLOY') {
 			steps {
 				sh ''' 
-					echo this is my first stage in pipeline job
+					sleep 5
 					du -h 
 				   '''
 			}
